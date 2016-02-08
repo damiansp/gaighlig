@@ -54,6 +54,15 @@ db.define_table(
 
     # Other stuff
     Field('created_on', default = datetime.utcnow()),
-    Field('created_by', default = 'DSP')
+    Field('created_by', default = auth.user_id)
     
+)
+
+
+db.define_table(
+    'people',
+    Field('user_id', db.auth_user, default = auth.user_id, readable = False),
+    Field('name', required = True),
+    Field('email'),
+    Field('phone', default = '123-456-7890')
 )

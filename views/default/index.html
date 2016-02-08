@@ -1,3 +1,21 @@
 {{extend 'layout.html'}}
 
-{{=add_data}}
+{{if auth.user_id is None:}}
+<h1>Welcome to the Gàighlig Dictionary Database Interface</h1>
+<div id="main-login-button">
+  {{=A('Log in', _class = 'btn btn-success',
+       _href = URL('default', 'user', args = ['login']))}}
+  {{=A('Register', _class = 'btn btn-primary',
+       _href = URL('default', 'user', args = ['register']))}}
+</div>
+
+{{else:}}
+
+<h1>Welcome back</h1>
+<p>
+  What would you like to do?
+</p>
+{{=add_data}} {{=view_data}}
+
+
+{{pass}}
