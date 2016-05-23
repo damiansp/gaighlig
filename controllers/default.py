@@ -34,8 +34,9 @@ def register():
 
 
 # For dictionary input, specify allowed values for fields, where necessary
-allowed_pos = ['n', 'v', 'adj', 'adv', 'prep', 'expr', 'art', 'conj']
-allowed_pos_detail = ['coll', 'irr', 'np']
+allowed_pos = ['adj', 'adv', 'art', 'conj', 'excl', 'expr', 'n', 'prep', 'pn',
+               'v']
+allowed_pos_detail = ['coll', 'dem', 'irr', 'np', 'rel']
 allowed_gender = ['f', 'm', '']
 
 
