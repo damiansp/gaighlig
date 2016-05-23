@@ -25,7 +25,7 @@ db.define_table(
     Field('pos', label = 'Part of speech', required = True),
     Field('pos_extra', label = 'Part of speech detailed', default = '<none>'),
     Field('post_asp', 'boolean', label = 'Post-aspiration', default = False),
-                    
+    Field('post_vn', 'boolean', label = '+ v.n.', default = False),
     # Nouns
     Field('gender', label = 'Gender'),
     Field('nom_sg_def', label = 'Nomininative singular definite'),
